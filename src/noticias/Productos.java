@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productos;
+package noticias;
 
 public class Productos {
 
@@ -11,17 +11,17 @@ public class Productos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ProductDao product = new ProductDaoImpl();
+        NoticeDao notice = new NoticeDaoImpl();
         
         // agregar nuevo producto
-        product.insert(new Product(1, "Arroz", 1.50));
+        notice.insert(new Notice(6,"Arroz", 1.50));
         
         // obtener el producto con ID = 100 e imprimirlo en pantalla
-        Product p = product.read(1);
+        Notice p = notice.read(2);
         System.out.println(p);
         
         // eliminar el producto con ID = 100
-        product.delete(1);
+        //product.delete(1);
     }
     
 }

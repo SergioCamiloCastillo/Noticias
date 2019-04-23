@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productos;
+package noticias;
 
 /**
  *
  * @author User
  */
-public interface ProductDao {
-    public void insert(Product product);
-    public void update(Product product);
+public interface NoticeDao {
+    public void insert(Notice product);
+    public void update(Notice product);
     public void delete(Integer id);
-    public Product read(Integer id);
+    public Notice read(Integer id);
 }

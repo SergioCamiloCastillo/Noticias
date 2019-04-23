@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package productos;
+package noticias;
 
 /**
  *
  * @author User
  */
-public class Product {
+public class Notice {
 
     private Integer id;
     private String name;
     private Double price;
 
-    public Product(Integer id, String name, Double price) {
+    public Notice(Integer id, String name, Double price) {
         this.id = id;
         this.name = name;
         this.price = price;
