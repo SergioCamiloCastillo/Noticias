@@ -20,16 +20,16 @@ public class ProductDaoImpl implements ProductDao {
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost:3306/";
-    static final String DB_USER = "root";
+    static final String DB_USER = "sergio";
     static final String DB_NAME = "curd_test";
 
-    static final String DB_PASS = "";
+    static final String DB_PASS = "sergio";
 
     private void registerDriver() {
         try {   
             Class.forName(JDBC_DRIVER).newInstance();
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-            System.err.println("ERROR: failed to load HSQLDB JDBC driver.");
+            System.err.println("ERROR");
             e.printStackTrace();
         }
     }
@@ -39,8 +39,10 @@ public class ProductDaoImpl implements ProductDao {
         Connection conn = null;
         try {
             registerDriver();
-            // abrir la conexion    
-            conn=DriverManager.getConnection(DB_URL+DB_NAME+DB_USER+DB_PASS);
+            // abrir la conexion 
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/curd_test", "root", "");
+
+            //conn=DriverManager.getConnection(DB_URL+DB_NAME+DB_USER+DB_PASS);
             try (Statement stmt = conn.createStatement()) {
                 // enviar el comando insert
                 stmt.executeUpdate("insert into datos values ("

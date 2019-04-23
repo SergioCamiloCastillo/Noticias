@@ -14,14 +14,14 @@ public class Productos {
         ProductDao product = new ProductDaoImpl();
         
         // agregar nuevo producto
-        product.insert(new Product(100, "Arroz", 1.50));
+        product.insert(new Product(1, "Arroz", 1.50));
         
         // obtener el producto con ID = 100 e imprimirlo en pantalla
-        Product p = product.read(100);
+        Product p = product.read(1);
         System.out.println(p);
         
         // eliminar el producto con ID = 100
-        product.delete(100);
+        product.delete(1);
     }
     
 }
